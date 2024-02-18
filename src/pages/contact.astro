@@ -1,0 +1,60 @@
+---
+import MainHeader from "../components/MainHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+	<MainHeader textColor="#fff" />
+	<main
+		class="w-full h-[100dvh] text-white max-w-[1024px] container mx-auto flex flex-col items-center pt-[100px]"
+	>
+		<div
+			class="hidden w-full h-[550px] min-h-[550px] lg:flex justify-center px-5 overflow-hidden"
+		>
+			<iframe
+				class="rounded"
+				src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3799.469655804999!2d-63.2003889!3d-17.769611100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ2JzEwLjYiUyA2M8KwMTInMDEuNCJX!5e0!3m2!1ses!2sbo!4v1707089046176!5m2!1ses!2sbo"
+				width="800px"
+				height="550px"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			>
+			</iframe>
+		</div>
+		<div class="lg:hidden w-full px-5 overflow-hidden">
+			<iframe
+				class="rounded"
+				src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3799.469655804999!2d-63.2003889!3d-17.769611100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ2JzEwLjYiUyA2M8KwMTInMDEuNCJX!5e0!3m2!1ses!2sbo!4v1707089046176!5m2!1ses!2sbo"
+				width="450px"
+				height="600px"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			>
+			</iframe>
+		</div>
+		<div
+			class="w-full max-w-[800px] px-5 mt-10 pb-10 [&>h2]:font-semibold [&>h2]:mt-2"
+		>
+			<h2>Dirección:</h2>
+			<p>3er anillo interno, calle Nicolas Ortiz, frente a BOVIGEN</p>
+			<h2>Horarios de atención:</h2>
+			<p>
+				Lunes a Viernes:
+				<br />
+				8:00 AM a 12:00 PM
+				<br />
+				14:00 PM a 18:00 PM
+				<br />
+				Sábados:
+				<br />
+				8:00 AM a 12:00 PM
+			</p>
+			<h2>Celular:</h2>
+			<p>76638789 - 78085945</p>
+		</div>
+	</main>
+</Layout>

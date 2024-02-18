@@ -1,0 +1,32 @@
+---
+interface Props {
+    dataHeaderColor: string;
+    srcVideo: string;
+    srcImagen: string;
+}
+
+const { dataHeaderColor = "#fff", srcVideo = "./videoHome.mp4", srcImagen } = Astro.props;
+---
+
+<section
+    data-header-color="white"
+    class="landing-section h-full w-full bg-black text-center relative overflow-hidden"
+>
+    <div class="z-30 relative h-full flex flex-col text-white">
+        <slot />
+    </div>
+
+    <div class="hidden lg:flex absolute top-0 bottom-0 left-0 right-0">
+        <video
+            autoplay
+            muted
+            loop
+            class="object-center object-cover h-full w-full"
+            src={srcVideo}
+        >
+        </video>
+    </div>
+    <div class="absolute lg:hidden top-0 bottom-0 left-0 right-0">
+        <img class="object-center object-cover h-full w-full" src={srcImagen} />
+    </div>
+</section>

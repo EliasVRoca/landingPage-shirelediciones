@@ -1,0 +1,10 @@
+---
+import Error from "../components/Error.jsx";
+import MainHeader from "../components/MainHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page no found">
+    <MainHeader textColor="#fff"/>
+    <Error client:load />
+</Layout>

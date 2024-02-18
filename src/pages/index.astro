@@ -1,0 +1,39 @@
+---
+import MainHeader from "../components/MainHeader.astro";
+import VideoSection from "../components/VideoSection.astro";
+import Layout from "../layouts/Layout.astro";
+import { Global } from "../../global.js";
+---
+
+<Layout title="Inicio">
+	<MainHeader textColor="#fff" />
+	<VideoSection srcImagen="violin-924349_1280.jpg" dataHeaderColor="fff" srcVideo="videoHome.mp4">
+		<div class="h-[50dvh] flex justify-center items-start mt-[100px]">
+			<h2 class="text-[52px] py-1 px-2 rounded">
+				<span class="text-slate-200">Shirel</span> Ediciones
+			</h2>
+		</div>
+		<div class="h-[50dvh] flex flex-col justify-start items-center">
+			<p
+				class="max-w-[40rem] h-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded mx-2 text-center py-1 px-2"
+			>
+				La música es una parte esencial del desarrollo integral de los
+				niños y niñas. A través de la música, los niños pueden aprender
+				sobre diferentes culturas, desarrollar su creatividad y
+				expresión, y mejorar sus habilidades motoras y cognitivas.
+			</p>
+			<div class="w-full h-14 mt-20 flex justify-center items-center">
+				<a
+					href={Global.baseUrl + "catalog"}
+					class="bg-slate-900/50 text-white mr-2 py-2 px-10 backdrop-blur-lg rounded"
+					>Ver libros</a
+				>
+				<a
+					href={"https://portal.shirelediciones.com/sesion_register/singup.php"}
+					class="bg-slate-900/50 text-white py-2 px-10 backdrop-blur-lg rounded"
+					>Registrarse</a
+				>
+			</div>
+		</div>
+	</VideoSection>
+</Layout>

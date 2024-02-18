@@ -1,0 +1,20 @@
+---
+import ImgSection from "../components/ImgSection.astro";
+import MainHeader from "../components/MainHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Catálogo">
+    <MainHeader textColor="" />
+    <main
+        class="w-full h-[100dvh] max-w-[1024px] container mx-auto flex flex-col justify-center items-center pt-32"
+    >
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-gray-800">En Mantenimiento</h1>
+            <p class="text-gray-600 mt-4">
+                Nuestro sitio web está actualmente en mantenimiento. Volveremos
+                pronto.
+            </p>
+        </div>
+    </main>
+</Layout>

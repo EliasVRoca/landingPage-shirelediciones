@@ -1,0 +1,47 @@
+---
+interface Props {
+    textColor: string;
+}
+import Logo from "./Logo.astro";
+import MobilMenu from "./MobilMenu.jsx";
+import { Global } from "../../global.js";
+const { textColor = "#fff", } = Astro.props;
+const { baseUrl } = Global;
+---
+
+<header
+    id="mainHeader"
+    class={`py-4 px-10 flex items-center fixed top-0 w-full justify-between text-white z-40`}
+    style=`color: ${textColor}`
+>
+    <div class="flex-1 flex justify-start">
+        <Logo />
+    </div>
+    <nav class="hidden flex-[2_2_0%] lg:flex justify-center">
+        <ul
+            class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+        >
+            <li><a href={baseUrl}>Inicio</a></li>
+            <li><a href={baseUrl + "catalog"}>Catálogo</a></li>
+            <li><a href={baseUrl + "contact"}>Contacto</a></li>
+            <li><a href={baseUrl + "aboutus"}>Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+    <nav class="hidden flex-1 justify-end lg:flex">
+        <ul
+            class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+        >
+            <li>
+                <a href="https://portal.shirelediciones.com/"
+                    >Iniciar Sesión</a
+                >
+            </li>
+            <li>
+                <a href="https://portal.shirelediciones.com/sesion_register/singup.php"
+                    >Regístrese</a
+                >
+            </li>
+        </ul>
+    </nav>
+    <MobilMenu client:load />
+</header>
