@@ -1,0 +1,102 @@
+---
+import MainHeader from "../components/MainHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Característica">
+    <MainHeader textColor="#fff" />
+    <main
+        class="w-full h-[100dvh] max-w-[1024px] container mx-auto flex flex-col items-center pt-[100px]"
+    >
+        <main class="max-w-3xl mx-auto px-4 py-10 space-y-8 text-white">
+            <header class="space-y-2 text-center">
+                <h1 class="text-3xl font-bold text-indigo-400">
+                    Política de Privacidad
+                </h1>
+                <p class="text-sm text-white">
+                    Última actualización: 1 de agosto de 2025
+                </p>
+                <p>
+                    En <strong>Shirel Ediciones</strong> respetamos su privacidad.
+                    Aquí explicamos cómo tratamos su información personal al usar
+                    nuestro sitio y comprar nuestros libros de música.
+                </p>
+            </header>
+
+            <section>
+                <h2 class="text-xl font-semibold text-white">Responsable</h2>
+                <p class="mt-2">
+                    Nombre comercial: Shirel Ediciones<br />
+                    Actividad: Venta de libros de música<br />
+                    Ubicación: Santa Cruz de la Sierra, Bolivia<br />
+                    Correo: <a
+                        href="mailto:soporte@shirelediciones.com"
+                        class="text-indigo-200 hover:underline"
+                        >soporte@shirelediciones.com</a>
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-white">
+                    Datos que recopilamos
+                </h2>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>Nombre, correo, teléfono y dirección de envío.</li>
+                    <li>Historial de compras y productos adquiridos.</li>
+                    <li>
+                        Datos de pago procesados por terceros (no almacenamos su
+                        tarjeta).
+                    </li>
+                    <li>Datos técnicos como IP, navegador y cookies.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-white">
+                    Uso de la información
+                </h2>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>Procesar pedidos y pagos.</li>
+                    <li>Gestionar envíos y atención al cliente.</li>
+                    <li>Enviar novedades (si da su consentimiento).</li>
+                    <li>Mejorar el sitio y prevenir fraudes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-white">
+                    Sus derechos
+                </h2>
+                <p class="mt-2">
+                    Puede acceder, rectificar o eliminar sus datos, oponerse a
+                    su tratamiento y retirar su consentimiento en cualquier
+                    momento escribiéndonos a <a
+                        href="mailto:soporte@shirelediciones.com"
+                        class="text-indigo-600 hover:underline"
+                        >soporte@shirelediciones.com</a
+                    >.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-white">Seguridad</h2>
+                <p class="mt-2">
+                    Adoptamos medidas razonables para proteger su información,
+                    aunque ningún sistema es 100% seguro.
+                </p>
+            </section>
+
+            <footer class="text-center text-xs text-gray-500 pt-8">
+                &copy; <span id="year"></span> Shirel Ediciones. Todos los derechos
+                reservados.
+            </footer>
+        </main>
+    </main>
+
+    <script>
+        // Rellenar año automáticamente
+        document.getElementById("year").textContent = new Date()
+            .getFullYear()
+            .toString();
+    </script>
+</Layout>
